@@ -1,0 +1,24 @@
+@mixin logo($font, $marginLeft, $marginTop){
+	margin-left: $marginLeft;
+	margin-top: $marginTop;
+	font-family: $font;
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 24px;
+	text-transform: uppercase;
+}
+
+@mixin items($items){
+	.item {
+		text-align: center;
+		color: #fff;
+		margin-right: 30px;
+		padding-bottom: 5px;
+		&:hover{
+			border-bottom: 3px solid #fcac45;
+		}
+		&:nth-child(#{$items}n){
+			margin-right: 0;
+		}
+	}
+}
