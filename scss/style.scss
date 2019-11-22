@@ -6,6 +6,12 @@
     src: url(../fonts/semibold.ttf); /* Путь к файлу со шрифтом */
 }
 
+@font-face {
+    font-family: Light; /* Имя шрифта */
+    src: url(../fonts/light.ttf); /* Путь к файлу со шрифтом */
+}
+
+
 
 * {
 	margin: 0;
@@ -97,8 +103,7 @@ main{
 		}
 	}
 
-	.main-about{
-		.wrapper{
+	.main-about >.wrapper{
 			margin-left: 5%;
 			margin-right: 5%;
 			display: flex;
@@ -153,11 +158,9 @@ main{
 					}
 				}
 			}
-		}
 	}
 
-	.main-team{
-		.wrapper{
+	.main-team > .wrapper {
 			background: #000;
 			color: #ffffff;
 			text-align: center;
@@ -172,10 +175,7 @@ main{
 			}
 
 			.line{
-				width: 100px;
-				height: 5px;
-				background-color: #fcac45;
-				margin: auto;
+				@include line();
 				margin-bottom: 105px;
 			}
 
@@ -216,10 +216,311 @@ main{
 					margin-top: 35px;
 				}
 			}
+		}
 
+	.main-services > .wrapper{
+		background: #ffffff;
+		padding: 100px 188px;
+		text-align: center;
+		h1{
+			color: #222222;
+			font-family: Semibold;
+			font-size: 44px;
+			font-weight: 400;
+			line-height: 24px;
+			text-transform: uppercase;
+		}
+		.line{
+			@include line();
+			margin-top: 30px;
+			margin-bottom: 55px;
+		}
+
+		>p{
+			color: #6c6c6c;
+			font-family: "Open Sans";
+			font-size: 16px;
+			font-style: italic;
+			line-height: 24px;
+		}
+		.services_cards{
+			display: flex;
+			margin-top: 82px;
+
+			.services_card{
+				padding: 20px;
+				h4{
+					padding-top: 29px;
+					padding-bottom: 20px;
+					color: #222222;
+					font-family: Semibold;
+					font-size: 25px;
+					font-weight: 400;
+					line-height: 24px;
+					text-transform: uppercase;
+					}
+				p{
+					color: #222222;
+					font-family: "Open Sans";
+					font-size: 14px;
+					font-weight: 400;
+					line-height: 21px;
+				}
+			}
+		}
+	}
+
+	.main-clients > .wrapper{
+		padding: 101px 0 211px 0;
+		background: #000;
+		text-align: center;
+		color: #fff;
+		h1{
+			font-size: 44px;
+			line-height: 24px;
+			text-transform: uppercase;
+			font-family: "Open Sans";
+			font-weight: 300;
+			span{
+				font-family: Semibold;
+				font-weight: 600;
+			}
+		}
+
+		.line{
+			@include line();
+			margin-top: 30px;
+			margin-bottom: 112px;
+		}
+
+		.clients{
+			width: 100%;
+			.client {
+				margin-right: 32px;
+
+				&:nth-child(5n){
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+	.main-testimonials > .wrapper{
+		padding: 101px 0 173px;
+		text-align: center;
+		background: #000;
+		color: #fff;
+		h1{
+			font-size: 44px;
+			font-weight: 400;
+			line-height: 24px;
+			text-transform: uppercase;
+			.first{
+				font-family: Semibold;
+				font-weight: 600;
+			}
+			.second{
+				font-family: "Open Sans";
+				font-weight: 300;
+			}
+		}
+
+		.line{
+			@include line();
+			margin-top: 30px;
+			margin-bottom: 118px;
+		}
+
+		p{
+			width: 62%;
+			margin: auto;
+			color: #e7e7e7;
+			font-family: Semibold;
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 24px;
+			text-transform: uppercase;
+		}
+
+		.testimonials_author {
+
+			margin-top: 49px;
+			color: #b2b2b2;
+			font-family: "Open Sans";
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 24px;
+
+			span{
+				font-family: Light;
+				font-weight: 300;
+			}
+		}
+	}
+
+	.main-portfolio > .wrapper{
+		padding: 100px 0 100px;
+		text-align: center;
+		color: #000;
+		h1{
+			height: 31px;
+			color: #222222;
+			font-family: Light;
+			font-size: 44px;
+			font-weight: 300;
+			line-height: 24px;
+			text-transform: uppercase;
+			span{
+				font-family: Semibold;
+				font-weight: 400;
+			}
+		}
+
+		.line{
+			@include line();
+			margin-top: 30px;
+			margin-bottom: 56px;
+		}
+
+		p{
+			width: 75%;
+			margin: auto;
+			color: #6c6c6c;
+			font-family: "Open Sans";
+			font-size: 16px;
+			font-style: italic;
+			line-height: 24px;
+			margin-bottom: 175px;
+		}
+
+		.works > .works_line > img:hover{
+			opacity: 0.9;
+		}
+	}
+
+	.main-contact > .wrapper {
+		text-align: center;
+		padding: 100px 0 194px;
+		>h1{
+			color: #222222;
+			font-family: Semibold;
+			font-size: 44px;
+			font-weight: 400;
+			line-height: 24px;
+			text-transform: uppercase;
+		}
+		.line{
+			@include line();
+			margin-top: 30px;
+			margin-bottom: 56px;
+		}
+
+		>p{
+			width: 705px;
+			margin: auto;
+			margin-bottom: 95px;
+			color: #6c6c6c;
+			font-family: "Open Sans";
+			font-size: 16px;
+			font-style: italic;
+			line-height: 24px;
+		}
+		.contact_form{
+			width: 751px;
+			margin: 0 auto;
+			p{
+				text-align: left;
+				color: #636363;
+				font-family: "Open Sans";
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 24px;
+			}
+			span{
+				color: #db0000;
+			}
+
+
+			form > .form_inputs{
+				display: flex;
+				margin-bottom: 31px;
+				input:first-of-type{
+					margin-right: 30px;
+				}
+				input{
+					opacity: 0.8;
+					padding: 5px;
+					width: 360px;
+					height: 40px;
+					font-size: 20px;
+					border: 1px solid rgba(0, 0, 0, 0.4);
+					background-color: #ffffff;
+				}
+			}
+
+			textarea{
+				padding: 10px;
+				opacity: 0.8;
+				width: 751px;
+				height: 163px;
+				font-size: 20px;
+				border: 1px solid rgba(0, 0, 0, 0.4);
+				background-color: #ffffff;
+			}
+
+			input[type="submit"]{
+				margin-top: 32px;
+				border: 0;
+				float: right;
+				width: 165px;
+				height: 40px;
+				background-color: #fcac45;
+
+				color: #ffffff;
+				font-family: Semibold;
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 24px;
+				text-transform: uppercase;
+			}
+		}
+	}
+ }
+
+
+footer {
+	width: 100%;
+	height: auto;
+	background-color: #222222;
+	padding: 30px 0 30px;
+	.socialnetworks{
+		display: flex;
+		justify-content: center;
+		img{
+			margin-left: 12px;
+
+			&:hover{
+				opacity: 0.9;
+			}
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -274,7 +575,7 @@ main{
 				font-size: 40px;
 			}
 			p{
-				font-size: 15px;
+				font-size: 8px;
 			}
 		}
 		.main-about{
@@ -290,16 +591,18 @@ main{
 					margin-left: 0;
 					margin-top: 10px;
 					h1{
-						font-size: 25px;
+						width: 70%;
+						font-size: 50px;
 						border-bottom: 2px solid #fcac45;
 						padding-bottom: 15px;
 					}
 					p{
-						font-size: 15px;
+						font-size: 14px;
 					}
 					ul{
 						li{
 							background: 0;
+							font-size: 12px;
 						}
 					}
 				}
@@ -319,6 +622,20 @@ main{
 				}
 
 			}
+		}
+		.main-services > .wrapper > .services_cards{
+			flex-direction: column;
+		}
+
+		.main-portfolio > .wrapper{
+			.works{
+				.works_line > img:not(:first-child){
+					display: none;
+				}
+			}
+		}
+		.main-contact > .wrapper > .contact_form > form{
+			
 		}
 
 	}

@@ -5,6 +5,12 @@
   src: url(../fonts/semibold.ttf);
   /* Путь к файлу со шрифтом */ }
 
+@font-face {
+  font-family: Light;
+  /* Имя шрифта */
+  src: url(../fonts/light.ttf);
+  /* Путь к файлу со шрифтом */ }
+
 * {
   margin: 0;
   padding: 0; }
@@ -384,16 +390,16 @@ main {
         color: #fcac45;
         font-weight: 700;
         letter-spacing: -2.2px; }
-  main .main-about .wrapper {
+  main .main-about > .wrapper {
     margin-left: 5%;
     margin-right: 5%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     padding: 100px 0 100px 0; }
-    main .main-about .wrapper .about-right {
+    main .main-about > .wrapper .about-right {
       margin-left: 140px; }
-    main .main-about .wrapper .about-right h1 {
+    main .main-about > .wrapper .about-right h1 {
       color: #222222;
       font-family: "Open Sans", sans-serif;
       font-size: 34px;
@@ -403,19 +409,19 @@ main {
       padding-bottom: 20px;
       border-bottom: 4px solid #fcac45;
       display: inline-block; }
-      main .main-about .wrapper .about-right h1 .about-us {
+      main .main-about > .wrapper .about-right h1 .about-us {
         font-weight: 700; }
-    main .main-about .wrapper .about-right p {
+    main .main-about > .wrapper .about-right p {
       color: #6c6c6c;
       font-family: "Open Sans";
       font-size: 18px;
       font-weight: 400;
       line-height: 25px;
       padding-top: 31px; }
-    main .main-about .wrapper .about-right ul {
+    main .main-about > .wrapper .about-right ul {
       padding-top: 45px;
       line-height: 16px; }
-      main .main-about .wrapper .about-right ul li {
+      main .main-about > .wrapper .about-right ul li {
         color: #5a5a5a;
         font-family: "Open Sans";
         font-size: 16px;
@@ -424,51 +430,51 @@ main {
         background: url(../img/mark.png) 0px no-repeat;
         padding-left: 25px;
         margin-top: 10px; }
-        main .main-about .wrapper .about-right ul li .li_bold {
+        main .main-about > .wrapper .about-right ul li .li_bold {
           font-weight: 700; }
-  main .main-team .wrapper {
+  main .main-team > .wrapper {
     background: #000;
     color: #ffffff;
     text-align: center;
     padding: 100px 0 167px 0; }
-    main .main-team .wrapper h1 {
+    main .main-team > .wrapper h1 {
       font-family: Semibold;
       font-size: 44px;
       font-weight: 400;
       line-height: 24px;
       text-transform: uppercase;
       padding-bottom: 30px; }
-    main .main-team .wrapper .line {
+    main .main-team > .wrapper .line {
       width: 100px;
       height: 5px;
       background-color: #fcac45;
       margin: auto;
       margin-bottom: 105px; }
-    main .main-team .wrapper .team-cards {
+    main .main-team > .wrapper .team-cards {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-pack: distribute;
       justify-content: space-around;
       text-align: center; }
-      main .main-team .wrapper .team-cards .card > .photo {
+      main .main-team > .wrapper .team-cards .card > .photo {
         width: 125px;
         height: 125px;
         margin: auto;
         margin-bottom: 22px;
         border-radius: 50%;
         background: #c7bdbd; }
-      main .main-team .wrapper .team-cards .card > .name {
+      main .main-team > .wrapper .team-cards .card > .name {
         color: #ffffff;
         font-family: "Open Sans";
         font-size: 20px;
         font-weight: 700;
         line-height: 24px; }
-      main .main-team .wrapper .team-cards .card > .position {
+      main .main-team > .wrapper .team-cards .card > .position {
         font-family: "Open Sans";
         font-size: 16px;
         font-weight: 400; }
-      main .main-team .wrapper .team-cards .card > .about-position {
+      main .main-team > .wrapper .team-cards .card > .about-position {
         width: 247px;
         height: 59px;
         color: #ffffff;
@@ -477,6 +483,245 @@ main {
         font-weight: 400;
         line-height: 24px;
         margin-top: 35px; }
+  main .main-services > .wrapper {
+    background: #ffffff;
+    padding: 100px 188px;
+    text-align: center; }
+    main .main-services > .wrapper h1 {
+      color: #222222;
+      font-family: Semibold;
+      font-size: 44px;
+      font-weight: 400;
+      line-height: 24px;
+      text-transform: uppercase; }
+    main .main-services > .wrapper .line {
+      width: 100px;
+      height: 5px;
+      background-color: #fcac45;
+      margin: auto;
+      margin-top: 30px;
+      margin-bottom: 55px; }
+    main .main-services > .wrapper > p {
+      color: #6c6c6c;
+      font-family: "Open Sans";
+      font-size: 16px;
+      font-style: italic;
+      line-height: 24px; }
+    main .main-services > .wrapper .services_cards {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin-top: 82px; }
+      main .main-services > .wrapper .services_cards .services_card {
+        padding: 20px; }
+        main .main-services > .wrapper .services_cards .services_card h4 {
+          padding-top: 29px;
+          padding-bottom: 20px;
+          color: #222222;
+          font-family: Semibold;
+          font-size: 25px;
+          font-weight: 400;
+          line-height: 24px;
+          text-transform: uppercase; }
+        main .main-services > .wrapper .services_cards .services_card p {
+          color: #222222;
+          font-family: "Open Sans";
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 21px; }
+  main .main-clients > .wrapper {
+    padding: 101px 0 211px 0;
+    background: #000;
+    text-align: center;
+    color: #fff; }
+    main .main-clients > .wrapper h1 {
+      font-size: 44px;
+      line-height: 24px;
+      text-transform: uppercase;
+      font-family: "Open Sans";
+      font-weight: 300; }
+      main .main-clients > .wrapper h1 span {
+        font-family: Semibold;
+        font-weight: 600; }
+    main .main-clients > .wrapper .line {
+      width: 100px;
+      height: 5px;
+      background-color: #fcac45;
+      margin: auto;
+      margin-top: 30px;
+      margin-bottom: 112px; }
+    main .main-clients > .wrapper .clients {
+      width: 100%; }
+      main .main-clients > .wrapper .clients .client {
+        margin-right: 32px; }
+        main .main-clients > .wrapper .clients .client:nth-child(5n) {
+          margin-right: 0; }
+  main .main-testimonials > .wrapper {
+    padding: 101px 0 173px;
+    text-align: center;
+    background: #000;
+    color: #fff; }
+    main .main-testimonials > .wrapper h1 {
+      font-size: 44px;
+      font-weight: 400;
+      line-height: 24px;
+      text-transform: uppercase; }
+      main .main-testimonials > .wrapper h1 .first {
+        font-family: Semibold;
+        font-weight: 600; }
+      main .main-testimonials > .wrapper h1 .second {
+        font-family: "Open Sans";
+        font-weight: 300; }
+    main .main-testimonials > .wrapper .line {
+      width: 100px;
+      height: 5px;
+      background-color: #fcac45;
+      margin: auto;
+      margin-top: 30px;
+      margin-bottom: 118px; }
+    main .main-testimonials > .wrapper p {
+      width: 62%;
+      margin: auto;
+      color: #e7e7e7;
+      font-family: Semibold;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+      text-transform: uppercase; }
+    main .main-testimonials > .wrapper .testimonials_author {
+      margin-top: 49px;
+      color: #b2b2b2;
+      font-family: "Open Sans";
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px; }
+      main .main-testimonials > .wrapper .testimonials_author span {
+        font-family: Light;
+        font-weight: 300; }
+  main .main-portfolio > .wrapper {
+    padding: 100px 0 100px;
+    text-align: center;
+    color: #000; }
+    main .main-portfolio > .wrapper h1 {
+      height: 31px;
+      color: #222222;
+      font-family: Light;
+      font-size: 44px;
+      font-weight: 300;
+      line-height: 24px;
+      text-transform: uppercase; }
+      main .main-portfolio > .wrapper h1 span {
+        font-family: Semibold;
+        font-weight: 400; }
+    main .main-portfolio > .wrapper .line {
+      width: 100px;
+      height: 5px;
+      background-color: #fcac45;
+      margin: auto;
+      margin-top: 30px;
+      margin-bottom: 56px; }
+    main .main-portfolio > .wrapper p {
+      width: 75%;
+      margin: auto;
+      color: #6c6c6c;
+      font-family: "Open Sans";
+      font-size: 16px;
+      font-style: italic;
+      line-height: 24px;
+      margin-bottom: 175px; }
+    main .main-portfolio > .wrapper .works > .works_line > img:hover {
+      opacity: 0.9; }
+  main .main-contact > .wrapper {
+    text-align: center;
+    padding: 100px 0 194px; }
+    main .main-contact > .wrapper > h1 {
+      color: #222222;
+      font-family: Semibold;
+      font-size: 44px;
+      font-weight: 400;
+      line-height: 24px;
+      text-transform: uppercase; }
+    main .main-contact > .wrapper .line {
+      width: 100px;
+      height: 5px;
+      background-color: #fcac45;
+      margin: auto;
+      margin-top: 30px;
+      margin-bottom: 56px; }
+    main .main-contact > .wrapper > p {
+      width: 705px;
+      margin: auto;
+      margin-bottom: 95px;
+      color: #6c6c6c;
+      font-family: "Open Sans";
+      font-size: 16px;
+      font-style: italic;
+      line-height: 24px; }
+    main .main-contact > .wrapper .contact_form {
+      width: 751px;
+      margin: 0 auto; }
+      main .main-contact > .wrapper .contact_form p {
+        text-align: left;
+        color: #636363;
+        font-family: "Open Sans";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px; }
+      main .main-contact > .wrapper .contact_form span {
+        color: #db0000; }
+      main .main-contact > .wrapper .contact_form form > .form_inputs {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-bottom: 31px; }
+        main .main-contact > .wrapper .contact_form form > .form_inputs input:first-of-type {
+          margin-right: 30px; }
+        main .main-contact > .wrapper .contact_form form > .form_inputs input {
+          opacity: 0.8;
+          padding: 5px;
+          width: 360px;
+          height: 40px;
+          font-size: 20px;
+          border: 1px solid rgba(0, 0, 0, 0.4);
+          background-color: #ffffff; }
+      main .main-contact > .wrapper .contact_form textarea {
+        padding: 10px;
+        opacity: 0.8;
+        width: 751px;
+        height: 163px;
+        font-size: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.4);
+        background-color: #ffffff; }
+      main .main-contact > .wrapper .contact_form input[type="submit"] {
+        margin-top: 32px;
+        border: 0;
+        float: right;
+        width: 165px;
+        height: 40px;
+        background-color: #fcac45;
+        color: #ffffff;
+        font-family: Semibold;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-transform: uppercase; }
+
+footer {
+  width: 100%;
+  height: auto;
+  background-color: #222222;
+  padding: 30px 0 30px; }
+  footer .socialnetworks {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    footer .socialnetworks img {
+      margin-left: 12px; }
+      footer .socialnetworks img:hover {
+        opacity: 0.9; }
 
 @media screen and (max-width: 1060px) {
   .main-menu a {
@@ -507,7 +752,7 @@ main {
   main .main-welcome h1 {
     font-size: 40px; }
   main .main-welcome p {
-    font-size: 15px; }
+    font-size: 8px; }
   main .main-about .wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -520,13 +765,15 @@ main {
       margin-left: 0;
       margin-top: 10px; }
       main .main-about .wrapper .about-right h1 {
-        font-size: 25px;
+        width: 70%;
+        font-size: 50px;
         border-bottom: 2px solid #fcac45;
         padding-bottom: 15px; }
       main .main-about .wrapper .about-right p {
-        font-size: 15px; }
+        font-size: 14px; }
       main .main-about .wrapper .about-right ul li {
-        background: 0; }
+        background: 0;
+        font-size: 12px; }
   main .main-team .wrapper .team-cards {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -535,4 +782,11 @@ main {
     main .main-team .wrapper .team-cards .card {
       margin-bottom: 30px; }
       main .main-team .wrapper .team-cards .card .position, main .main-team .wrapper .team-cards .card .about-position {
-        margin: auto; } }
+        margin: auto; }
+  main .main-services > .wrapper > .services_cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  main .main-portfolio > .wrapper .works .works_line > img:not(:first-child) {
+    display: none; } }

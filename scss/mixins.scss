@@ -22,3 +22,10 @@
 		}
 	}
 }
+
+@mixin line(){
+	width: 100px;
+	height: 5px;
+	background-color: #fcac45;
+	margin: auto;		
+}
